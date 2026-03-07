@@ -3,14 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARIACH — DSCFF</title>
+<title>MARIACHI — Textile Art by Mariia Fedianina</title>
+<meta name="description" content="Tufted art & design inspired by Mexican folk art. Handmade rugs by Mariia Fedianina. Based in Spain.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0a0a0a; color: #f2ede6; font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-  h1 { font-size: 48px; letter-spacing: 8px; opacity: 0.3; }
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background-color:#FAF6EF;color:#1C1410;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background-color:rgba(250,246,239,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(28,20,16,0.1)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{background-color:#E8621A;padding:4px 12px;position:relative;display:inline-block}
+.nav-logo span{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.15em;color:#1C1410}
+.nav-logo-teeth{position:absolute;bottom:-6px;left:0;right:0;height:6px;overflow:hidden}
+.nav-links{display:flex;gap:2rem;font-size:0.875rem;font-weight:500;letter-spacing:0.05em}
+.nav-links a{color:#1C1410;text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:#E8621A}
+.teeth{line-height:0}.teeth.flip{transform:scaleY(-1)}.teeth svg{display:block;width:100%;height:32px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px);padding-top:64px;position:relative;overflow:hidden}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 3rem 4rem 4rem;position:relative;z-index:2}
+.hero-eyebrow{font-family:'Caveat',cursive;font-size:1.25rem;color:#E8621A;margin-bottom:1rem;font-weight:600}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:900;line-height:1.0;color:#1C1410;margin-bottom:1.5rem}
+.hero-title .italic{font-style:italic;font-weight:400;font-size:0.6em;color:#E8621A}
+.hero-line{width:60px;height:3px;background-color:#E8621A;margin-bottom:1.5rem}
+.hero-desc{font-size:1.1rem;line-height:1.7;color:#3D2B1F;max-width:420px;margin-bottom:2rem}
+.hero-loc{font-size:0.95rem;color:#6B5040;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background-color:#E8621A;color:white;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.875rem 2rem;text-decoration:none;font-size:0.875rem;transition:all 0.3s ease;display:inline-block;border:2px solid #E8621A}
+.btn-primary:hover{background-color:transparent;color:#E8621A}
+.btn-secondary{background-color:transparent;color:#1C1410;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.875rem 2rem;text-decoration:none;font-size:0.875rem;transition:all 0.3s ease;display:inline-block;border:2px solid #1C1410}
+.btn-secondary:hover{background-color:#1C1410;color:white}
+.hero-img{position:relative;overflow:hidden}.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(250,246,239,0.3) 0%,transparent 30%)}
+.hero-texture{position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;z-index:3}
+.hero-texture img{width:100%;height:100%;object-fit:cover;opacity:0.15}
+.marquee-strip{background-color:#E8621A;padding:1rem 0;overflow:hidden}
+.marquee-track{display:flex;gap:4rem;animation:marquee 20s linear infinite;white-space:nowrap}
+.marquee-track span{font-weight:700;font-size:0.875rem;letter-spacing:0.2em;text-transform:uppercase;color:#1C1410}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.section{padding:6rem 0}.section-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{position:relative}.about-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.about-img-border{position:absolute;bottom:-16px;right:-16px;width:60%;height:60%;border:3px solid #E8621A;z-index:-1}
+.about-img-label{position:absolute;top:-20px;left:20px;background-color:#E8621A;padding:6px 16px;font-family:'Caveat',cursive;font-size:1.1rem;color:white;font-weight:700;transform:rotate(-2deg)}
+.section-eyebrow{font-family:'Caveat',cursive;font-size:1.2rem;color:#E8621A;margin-bottom:0.75rem;font-weight:600}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;color:#1C1410;margin-bottom:1.5rem}
+.section-title .it{font-style:italic}.section-title .orange{color:#E8621A}
+.divider{width:50px;height:3px;background-color:#E8621A;margin-bottom:1.5rem}
+.body-text{font-size:1rem;line-height:1.8;color:#3D2B1F;margin-bottom:1.25rem}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(28,20,16,0.15)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#E8621A}
+.stat-label{font-size:0.8rem;color:#6B5040;text-transform:uppercase;letter-spacing:0.05em}
+.section-dark{background-color:#1C1410;padding:5rem 0;position:relative;overflow:hidden}
+.section-dark .overlay{position:absolute;inset:0;opacity:0.08}.section-dark .overlay img{width:100%;height:100%;object-fit:cover}
+.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+.section-title-light{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;color:#FAF6EF;margin-bottom:1.5rem}
+.body-text-light{font-size:1rem;line-height:1.8;color:#C4A882;margin-bottom:1.25rem}
+blockquote{border-left:3px solid #E8621A;padding-left:1.25rem;font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:#FAF6EF;line-height:1.6}
+.process-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top}
+.section-center{text-align:center;margin-bottom:4rem}.section-center .divider{margin:0 auto}
+.section-title-lg{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;color:#1C1410;margin-bottom:1rem}
+.featured-grid-left{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem}
+.featured-grid-right{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:center;margin-bottom:4rem}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem}
+.portfolio-item{overflow:hidden;transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)}
+.portfolio-item:hover{transform:scale(1.02);box-shadow:0 20px 60px rgba(28,20,16,0.2)}
+.portfolio-item img{transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);width:100%;display:block}
+.portfolio-item:hover img{transform:scale(1.05)}
+.portfolio-caption{padding:0.75rem 0}
+.portfolio-caption .name{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:#1C1410}
+.portfolio-caption .meta{font-size:0.8rem;color:#6B5040}
+.featured-eyebrow{font-family:'Caveat',cursive;font-size:1rem;color:#E8621A;margin-bottom:0.5rem}
+.featured-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;font-style:italic;color:#1C1410;margin-bottom:0.75rem}
+.featured-meta{font-size:0.85rem;color:#6B5040;margin-bottom:1rem;letter-spacing:0.05em}
+.featured-text{font-size:0.95rem;line-height:1.7;color:#3D2B1F;margin-bottom:1.25rem}
+.section-green{background-color:#2A5C45;padding:5rem 0;position:relative;overflow:hidden}
+.section-green .section-eyebrow{color:#FAF6EF;opacity:0.8}.section-green .section-title{color:#FAF6EF}
+.section-green img{width:100%;display:block;max-height:600px;object-fit:cover;object-position:center}
+.install-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.install-grid img{width:100%;display:block;object-fit:cover}
+.info-box{background-color:#F5EDD8;padding:1.25rem 1.5rem;border-left:4px solid #E8621A;margin-top:1.5rem}
+.info-box .label{font-size:0.85rem;color:#6B5040;margin-bottom:0.25rem}
+.info-box .value{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#1C1410}
+.info-box .note{font-size:0.85rem;color:#6B5040;margin-top:0.5rem}
+.section-beige{background-color:#F5EDD8;padding:5rem 0}
+.exhibition-card{display:flex;gap:2rem;align-items:flex-start;padding:2rem;background-color:#FAF6EF;border-left:4px solid #E8621A;max-width:700px;margin:0 auto}
+.exhibition-year{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#E8621A;line-height:1;min-width:70px}
+.exhibition-title{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#1C1410;margin-bottom:0.5rem}
+.exhibition-loc{font-size:0.9rem;color:#6B5040;margin-bottom:0.75rem}
+.exhibition-desc{font-size:0.9rem;line-height:1.6;color:#3D2B1F}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+.contact-link{display:flex;align-items:center;gap:1rem;text-decoration:none;color:#FAF6EF;transition:color 0.2s;margin-bottom:1.25rem}
+.contact-link:hover{color:#E8621A}
+.contact-icon{width:40px;height:40px;background-color:#E8621A;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-label{font-size:0.8rem;color:#8B7355;text-transform:uppercase;letter-spacing:0.05em}
+.contact-value{font-size:1rem}
+.contact-img img{width:100%;display:block}
+.contact-img .caption{margin-top:1rem;font-family:'Caveat',cursive;font-size:1rem;color:#8B7355;text-align:center}
+footer{background-color:#FAF6EF;padding:2.5rem 0;border-top:1px solid rgba(28,20,16,0.1)}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{background-color:#E8621A;padding:3px 10px;display:inline-block}
+.footer-logo span{font-weight:700;font-size:0.9rem;letter-spacing:0.15em;color:#1C1410}
+.footer-text{font-size:0.85rem;color:#6B5040}.footer-copy{font-size:0.8rem;color:#8B7355}
+.fade-in-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-in-up.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){
+.hero-grid{grid-template-columns:1fr}.hero-text{padding:2rem 1.5rem}.hero-img{height:60vw}
+.about-grid,.process-grid,.featured-grid-left,.featured-grid-right,.install-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+.portfolio-grid{grid-template-columns:1fr 1fr}.exhibition-card{flex-direction:column;gap:1rem}
+.footer-inner{justify-content:center;text-align:center}
+}
+@media(max-width:480px){.portfolio-grid{grid-template-columns:1fr}.nav-links{gap:1rem}.hero-btns{flex-direction:column}}
 </style>
 </head>
 <body>
-<h1>MARIACH</h1>
+<nav><div class="nav-inner"><div class="nav-logo"><span>MARIACHI</span><div class="nav-logo-teeth"><svg viewBox="0 0 100 6" preserveAspectRatio="none" style="width:100%;height:100%"><path d="M0 0 L5 6 L10 0 L15 6 L20 0 L25 6 L30 0 L35 6 L40 0 L45 6 L50 0 L55 6 L60 0 L65 6 L70 0 L75 6 L80 0 L85 6 L90 0 L95 6 L100 0 L100 6 L0 6 Z" fill="#1C1410"/></svg></div></div><div class="nav-links"><a href="#about">About</a><a href="#portfolio">Works</a><a href="#contact">Contact</a></div></div></nav>
+
+<section class="hero-grid">
+<div class="hero-text">
+<div class="hero-eyebrow">Textile Art & Design</div>
+<h1 class="hero-title">MARIACHI<br><span class="italic">Rugs</span></h1>
+<div class="hero-line"></div>
+<p class="hero-desc">Tufted art & design inspired by Mexican folk art. All goods produced with handmade love meditation.</p>
+<p class="hero-loc">Based in Spain · @mariia_mariachi</p>
+<div class="hero-btns"><a href="#portfolio" class="btn-primary">View Works</a><a href="#contact" class="btn-secondary">Get in Touch</a></div>
+</div>
+<div class="hero-img"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/hero_artist_clean_0ebb60fd.jpg" alt="Mariia Mariachi"><div class="hero-img-overlay"></div></div>
+<div class="hero-texture"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/hero_texture-QCVZRej8qhRqRJi4eTSbqp.webp" alt=""></div>
+</section>
+
+<div class="teeth"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#E8621A"/></svg></div>
+<div class="marquee-strip"><div class="marquee-track"><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span><span>Hand-Tufted Rugs &nbsp;·&nbsp; Mexican Folk Art &nbsp;·&nbsp; Fiber Art &nbsp;·&nbsp; Made with Love &nbsp;·&nbsp; Barcelona, Spain &nbsp;·&nbsp;</span></div></div>
+<div class="teeth flip"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#E8621A"/></svg></div>
+
+<section id="about" class="section"><div class="section-inner"><div class="about-grid">
+<div class="about-img fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/artist_portrait_c143a783.jpg" alt="Mariia Mariachi"><div class="about-img-border"></div><div class="about-img-label">Artist</div></div>
+<div class="fade-in-up">
+<div class="section-eyebrow">About the Artist</div>
+<h2 class="section-title">Mariia<br><span class="it">Fedianina</span></h2>
+<div class="divider"></div>
+<p class="body-text">My name is Maria, I am a textile artist specializing in handcrafted tufted rugs. My work explores the dialogue between folk culture and contemporary textile design, drawing strong inspiration from Mexican folklore.</p>
+<p class="body-text">Every rug I create is a reflection of personal storytelling, emotions, and cultural motifs. Using vibrant colors and textured surfaces, I aim to create tactile experiences that engage both sight and touch.</p>
+<p class="body-text" style="margin-bottom:2rem">I approach rug-making not only as craftsmanship but as a form of artistic expression, where traditional techniques meet my personal aesthetic. My rugs are designed to occupy space as art objects and to resonate emotionally with the viewer.</p>
+<div class="stats-grid"><div><div class="stat-num">2023</div><div class="stat-label">Founded</div></div><div><div class="stat-num">100%</div><div class="stat-label">Handmade</div></div><div><div class="stat-num">Spain</div><div class="stat-label">Based in</div></div></div>
+</div></div></div></section>
+
+<section class="section-dark">
+<div class="teeth"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#1C1410"/></svg></div>
+<div class="overlay"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/hero_texture-QCVZRej8qhRqRJi4eTSbqp.webp" alt=""></div>
+<div class="section-inner"><div class="process-grid">
+<div class="fade-in-up">
+<div class="section-eyebrow">The Process</div>
+<h2 class="section-title-light">Tufted Art<br><span style="font-style:italic;color:#E8621A">& Design</span></h2>
+<div class="divider"></div>
+<p class="body-text-light">Each piece begins with a vision — a symbol, a feeling, a story from folklore. Using a tufting gun and professional wool yarns, the design comes to life thread by thread, color by color.</p>
+<p class="body-text-light">The result is a textile object that functions both as art and as a living element of interior space — designed to become a focal point, to be touched, to be felt.</p>
+<blockquote>"Textiles with soul — fusing ancestral craft and personal storytelling."</blockquote>
+</div>
+<div class="fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/artist_tufting_a35a1cd6.jpg" alt="Mariia working"></div>
+</div></div>
+<div style="margin-top:5rem" class="teeth flip"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#1C1410"/></svg></div>
+</section>
+
+<section id="portfolio" class="section"><div class="section-inner">
+<div class="section-center fade-in-up"><div class="section-eyebrow">Portfolio</div><h2 class="section-title-lg">Works</h2><div class="divider"></div></div>
+<div class="featured-grid-left fade-in-up">
+<div class="portfolio-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/coatlicue_collage_1f761a9c.jpg" alt="Coatlicue's Dream"></div>
+<div><div class="featured-eyebrow">Featured Work</div><h3 class="featured-title">Coatlicue's Dream</h3><div class="featured-meta">2024 · Hand-tufted wool and acrylic yarns · 130 × 180 cm</div><p class="featured-text">Inspired by Mexican mythology, Día de los Muertos, and the feminine force of transformation. In the center is a shamanic woman — part goddess, part guide — offering a human heart in one hand and a dog in the other.</p><p class="featured-text">This piece is both a vision and a ritual. The fiber becomes altar, memory, and myth. Through texture and color, I explore textile as a sacred language — rooted in folklore, transformation, and inner power.</p></div>
+</div>
+<div class="portfolio-grid">
+<div class="portfolio-item fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/rug_in_hallway_8629bc1a.jpg" alt="Coatlicue's Dream" style="aspect-ratio:3/4;object-fit:cover"><div class="portfolio-caption"><div class="name">Coatlicue's Dream</div><div class="meta">2024 · 130 × 180 cm</div></div></div>
+<div class="portfolio-item fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/artist_with_wall_art_fc77a581.jpg" alt="Wall Art" style="aspect-ratio:3/4;object-fit:cover"><div class="portfolio-caption"><div class="name">Wall Art Installation</div><div class="meta">2024 · Fiber Art</div></div></div>
+<div class="portfolio-item fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/tree_of_light_single_3b55b5d9.jpg" alt="Tree of Light" style="aspect-ratio:3/4;object-fit:cover"><div class="portfolio-caption"><div class="name">Tree of Light</div><div class="meta">2024 · 110 × 140 cm</div></div></div>
+</div>
+<div class="featured-grid-right fade-in-up">
+<div><div class="featured-eyebrow">Featured Work</div><h3 class="featured-title">Tree of Light</h3><div class="featured-meta">2024 · Hand-tufted wool and acrylic yarns · 110 × 140 cm</div><p class="featured-text">Inspired by the ancient symbol of the Tree of Life, interpreted through a contemporary, intuitive, and emotional lens. The tree grows organically across the soft surface, blooming into stylized buds and round white blossoms — each one slightly different, like breath.</p><p class="featured-text">This work speaks about memory, fertility, emotional continuity and softness. It is a soft textile object, but also a living symbol.</p></div>
+<div class="portfolio-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/tree_of_light_artwork_0c8569d9.jpg" alt="Tree of Light"></div>
+</div>
+</div></section>
+
+<section class="section-green">
+<div class="teeth"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#2A5C45"/></svg></div>
+<div class="section-inner" style="position:relative;z-index:2">
+<div class="section-center fade-in-up"><div class="section-eyebrow">In Your Space</div><h2 class="section-title">Statement Rugs for<br><span class="it orange">Distinctive Interiors</span></h2></div>
+<div class="fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/interior_design_d6b96cb6.jpg" alt="Interior design"></div>
+</div>
+<div style="margin-top:5rem" class="teeth flip"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#2A5C45"/></svg></div>
+</section>
+
+<section class="section"><div class="section-inner"><div class="install-grid">
+<div class="fade-in-up">
+<div class="section-eyebrow">Installation Art</div>
+<h2 class="section-title">"People of the World"<br><span class="it orange">From Wall Art to Space of Unity</span></h2>
+<div class="divider"></div>
+<p class="body-text">This installation is about how humanity is united in one breath. Bright human figures form circles around the Earth, moving together in one dance where there are no borders or differences, and every voice becomes part of a common choir.</p>
+<p class="body-text">The faces of the people in this work are transformed into sunflowers — symbols of light, life, and resilience. In Ukrainian culture, the sunflower embodies loyalty, love for the land, and the inner strength of a people who turn toward the sun even in the hardest times.</p>
+<div class="info-box"><div class="label">Dimensions</div><div class="value">2m × 2.5m</div><div class="note">Available for exhibitions and commissions</div></div>
+</div>
+<div class="fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/people_world_photo_a3d89cd5.jpg" alt="People of the World"></div>
+</div></div></section>
+
+<section class="section-beige"><div class="section-inner">
+<div class="section-center fade-in-up"><div class="section-eyebrow">Recognition</div><h2 class="section-title-lg">Exhibitions</h2></div>
+<div class="fade-in-up"><div class="exhibition-card"><div class="exhibition-year">2024</div><div><div class="exhibition-title">Art On LOOP — The Holy Art Gallery</div><div class="exhibition-loc">Barcelona, Spain</div><p class="exhibition-desc">Selected as a featured artist in an international group exhibition showcasing emerging contemporary talents. Presented two original hand-tufted textile artworks as part of the "Barcelona Open Art" series, curated by The Holy Art Gallery.</p></div></div></div>
+</div></section>
+
+<section id="contact" class="section-dark" style="padding:6rem 0">
+<div class="teeth"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#1C1410"/></svg></div>
+<div class="overlay"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/hero_texture-QCVZRej8qhRqRJi4eTSbqp.webp" alt="" style="opacity:0.06"></div>
+<div class="section-inner"><div class="contact-grid">
+<div class="fade-in-up">
+<div class="section-eyebrow">Let's Connect</div>
+<h2 class="section-title-light" style="font-size:clamp(2.5rem,5vw,4rem)">Get in<br><span style="font-style:italic;color:#E8621A">Touch</span></h2>
+<div class="divider" style="margin-bottom:2rem"></div>
+<p class="body-text-light" style="margin-bottom:2.5rem">Interested in commissioning a piece, collaborating, or simply learning more about the work? I'd love to hear from you.</p>
+<a href="mailto:mashamade@gmail.com" class="contact-link"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">Email</div><div class="contact-value">mashamade@gmail.com</div></div></a>
+<a href="tel:+34607034371" class="contact-link"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.25-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="contact-label">Phone</div><div class="contact-value">+34 607 034 371</div></div></a>
+<a href="https://www.instagram.com/mariia_mariachi/" target="_blank" rel="noopener noreferrer" class="contact-link"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value">@mariia_mariachi</div></div></a>
+</div>
+<div class="contact-img fade-in-up"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663302306409/KhJCrqANALucMPMhe73odU/cube_clean_ba1f39b9.jpg" alt="The Cube"><div class="caption">"The Cube" — wall art installation</div></div>
+</div></div>
+<div style="margin-top:6rem" class="teeth flip"><svg viewBox="0 0 1440 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L30 32 L60 0 L90 32 L120 0 L150 32 L180 0 L210 32 L240 0 L270 32 L300 0 L330 32 L360 0 L390 32 L420 0 L450 32 L480 0 L510 32 L540 0 L570 32 L600 0 L630 32 L660 0 L690 32 L720 0 L750 32 L780 0 L810 32 L840 0 L870 32 L900 0 L930 32 L960 0 L990 32 L1020 0 L1050 32 L1080 0 L1110 32 L1140 0 L1170 32 L1200 0 L1230 32 L1260 0 L1290 32 L1320 0 L1350 32 L1380 0 L1410 32 L1440 0 L1440 32 L0 32 Z" fill="#1C1410"/></svg></div>
+</section>
+
+<footer><div class="footer-inner"><div style="display:flex;align-items:center;gap:0.75rem"><div class="footer-logo"><span>MARIACHI</span></div><span class="footer-text">Textile Art by Mariia Fedianina</span></div><div class="footer-copy">© 2024 MARIACHI · Barcelona, Spain</div></div></footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade-in-up').forEach(function(e){o.observe(e)});
+});
+</script>
 </body>
 </html>
